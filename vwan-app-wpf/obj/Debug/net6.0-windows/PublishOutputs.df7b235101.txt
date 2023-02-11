@@ -1,0 +1,15 @@
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\vwan-app-wpf.exe
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\vwan-app-wpf.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\vwan-app-wpf.deps.json
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\vwan-app-wpf.runtimeconfig.json
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\vwan-app-wpf.pdb
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Azure.Core.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Azure.Identity.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Azure.ResourceManager.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Azure.ResourceManager.Network.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Azure.ResourceManager.Resources.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Microsoft.Identity.Client.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\madedroo\OneDrive - Microsoft\Source\Repos\Public\vwan-segmentation-ui\vwan-app-wpf\bin\Release\net6.0-windows\app.publish\System.Memory.Data.dll

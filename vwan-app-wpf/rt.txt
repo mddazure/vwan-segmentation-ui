@@ -1,0 +1,2 @@
+PUT https://management.azure.com/subscriptions/84334547-c401-4548-9cc8-5330a9882d2c/resourceGroups/vwan-microhack-hub-rg/providers/Microsoft.Network/virtualHubs/microhack-we-hub
+/hubRouteTables/red?api-version=2022-07-01

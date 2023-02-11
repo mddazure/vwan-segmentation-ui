@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wrd2UOoXx3AqJ2ieMmia+ED5b05gBlW1iWF36Trb3gSYW9f3yE7mSlcZh0hXajii3fjvuRXKL96aPW1e2ccg1g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\madedroo\\OneDrive - Microsoft\\Source\\Repos\\Public\\vwan-segmentation-ui\\vwan-app-wpf\\vwan-app-wpf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\madedroo\\.nuget\\packages\\azure.core\\1.26.0\\azure.core.1.26.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\azure.identity\\1.8.1\\azure.identity.1.8.1.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\azure.resourcemanager\\1.3.2\\azure.resourcemanager.1.3.2.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\azure.resourcemanager.network\\1.1.0\\azure.resourcemanager.network.1.1.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\azure.resourcemanager.resources\\1.3.1\\azure.resourcemanager.resources.1.3.1.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\microsoft.identity.client\\4.46.0\\microsoft.identity.client.4.46.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.23.0\\microsoft.identity.client.extensions.msal.2.23.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.18.0\\microsoft.identitymodel.abstractions.6.18.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\madedroo\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

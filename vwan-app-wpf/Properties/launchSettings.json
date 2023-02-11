@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "vwan-app-wpf": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

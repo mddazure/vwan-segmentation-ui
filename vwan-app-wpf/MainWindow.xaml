@@ -1,0 +1,276 @@
+﻿<Window x:Class="vwan_app_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c="clr-namespace:vwan_app_wpf"
+        mc:Ignorable="d"
+        Title="Azure Virtual WAN - Network Segmentation" Height="920" Width="1600">
+
+
+
+    <Grid Margin="0,0,0,0">
+
+        <Button Content="Log in to Azure" ToolTip="Click to start login" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Click="Button_Click" Height="25" Width="100"/>
+        <Button Content="Add Domain" ToolTip="Click to add Segmentation Domain to list" HorizontalAlignment="Left" Margin="770,240,0,0" VerticalAlignment="Top" Height="25" Width="100" Name="AddSegmentationDomain" Click="AddSegmentationDomain_Click"/>
+        <Button Content="Add Link Group" ToolTip="Click to add Link Group to list" HorizontalAlignment="Left" Margin="1150,240,0,0" VerticalAlignment="Top" Height="25" Width="100" Name="AddLinkGroup" Click="AddLinkGroup_Click"/>
+        <Button Content="Connect Link Groups" ToolTip="Click to connect Link Groups" HorizontalAlignment="Left" Margin="1415,240,0,0" VerticalAlignment="Top" Height="25" Width="120" Name="ConnectLinkGroup" Click="ConnectLinkGroup_Click"/>
+        <Button Content="Add Spokes to Domain -->" ToolTip="Click to add Spokes to Segmentation Domain" HorizontalAlignment="Left" Margin="545,430,0,0" VerticalAlignment="Top" Height="25" Width="150" Name="AddSpokesToDomain" Click="AddSpokesToDomain_Click"/>
+        <Button Content="Add Domain to Group -->" ToolTip="Click to add Domain to Link Group" HorizontalAlignment="Left" Margin="940,433,0,0" VerticalAlignment="Top" Height="25" Width="150" Name="AddDomainToGroup" Click="AddDomainToGroup_Click"/>
+        <Button Content="List Spokes in Domain" ToolTip="Click to list Spokes in selected Segmentation Domain" HorizontalAlignment="Left" Margin="360,600,0,0" VerticalAlignment="Top" Height="25" Width="150" Name="ListSpokesInDomain" Click="ListSpokesInDomain_Click"/>
+        <Button Content="List Domains in Group" ToolTip="Click to Segmentation Domain in selected Group" HorizontalAlignment="Left" Margin="600,600,0,0" VerticalAlignment="Top" Height="25" Width="150" Name="ListDomainsInGroup" Click="ListDomainsInGroup_Click"/>
+        <Button Content="List RT's in Hub" ToolTip="Click to list RTs in selected Hub" HorizontalAlignment="Left" Margin="85,600,0,0" VerticalAlignment="Top" Height="25" Width="150" Name="ListRTsInHub" Click="ListRTsInHub_Click"/>
+        <Button Content="Program Segmentation Domains" ToolTip="Click to program RTs in Hubs" HorizontalAlignment="Left" Margin="920,150,0,0" VerticalAlignment="Top" Height="24" Width="184" Name="ProgramRTsInHubs" Click="ProgramRTsInHubs_Click"/>
+        <Button Content="Remove Segmentation Domains" ToolTip="Click to remove segmentation and restore default routing" HorizontalAlignment="Left" Margin="920,200,0,0" VerticalAlignment="Top" Height="24" Width="184" Name="RemoveRTsFromHubs" Click="RemoveRTsFromHubs_Click"/>
+
+        <TextBox    Name="SegmentationDomainTextBox"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    ToolTip="Enter new Segmentation Domain"
+                    Height="25"
+                    Width="200"
+                    Margin="720,280,0,0"/>
+
+        <TextBox    Name="LinkGroupTextBox"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    ToolTip="Enter new Link Group"
+                    Height="25"
+                    Width="200"
+                    Margin="1101,280,0,0"/>
+
+        <TextBlock  Text="Subscriptions"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="20,80,0,0"/>
+
+        <ComboBox   Name ="SubscriptionsBox"
+                    ToolTip="Subscriptions"
+                    HorizontalAlignment="Left"
+                    Margin="20,110,0,0"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    SelectionChanged="SubscriptionsBox_SelectionChanged"/>
+
+        <TextBlock  Text="Resource Groups"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="20,160,0,0"/>
+
+        <ComboBox   Name ="ResourcegroupsBox"
+                    ToolTip="ResourceGroups"
+                    HorizontalAlignment="Left"
+                    Margin="20,195,0,0"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25" 
+                    SelectionChanged="ResourcegroupsBox_SelectionChanged"/>
+
+        <TextBlock  Text="Virtual WANs"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="20,250,0,0"/>
+
+        <ComboBox   Name ="VirtualWANsBox"
+                    ToolTip="Virtual WANs"
+                    HorizontalAlignment="Left"
+                    Margin="20,280,0,0"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    SelectionChanged="VirtualWANsBox_SelectionChanged"
+                    DisplayMemberPath = "Data.Name"/>
+
+        <TextBlock  Text="Spoke Connections"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="280,320,0,0"/>
+
+        <ListBox    Name="SpokeConnectionsBox"
+                    SelectionMode="Extended"
+                    ToolTip="Spokes"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="180"
+                    Height="200"
+                    Margin="340,350,0,0"/>
+
+        <TextBlock  Text="Segmentation Domains"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="670,320,0,0"/>
+
+        <ListBox    Name="SegmentationDomainsBox"
+                    ToolTip="Segmentation Domains"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    Width="200"
+                    Height="200"
+                    Margin="720,350,0,0"/>
+
+        <TextBlock  Text="Link Groups"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="1050,320,0,0"/>
+
+        <ListBox    Name="LinkGroupsBox"
+                    SelectionMode="Single"
+                    ToolTip="Link Groups"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    Width="200"
+                    Height="200"
+                    Margin="1100,350,0,0"/>
+
+        <TextBlock  Text="Linked Groups"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="1325,320,0,0"/>
+
+        <ListBox    Name="LinkedGroupsBox"
+                    SelectionMode="Extended" 
+                    ToolTip="Link Groups"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    Width="200"
+                    Height="200"
+                    Margin="1375,350,0,0"/>
+
+
+
+
+        <TextBlock  Text="Virtual Hubs"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="20,320,0,0"/>
+        <ListBox  Name="VirtualHubsBox"
+                  SelectionMode="Single"
+                  ToolTip="VirtualHubs"
+                  HorizontalAlignment="Left"
+                  IsEnabled="True"
+                  VerticalAlignment="Top"
+                  Width="300"
+                  Height="200"
+                  Margin="20,350,0,0"
+                  SelectionChanged="VirtualHubsBox_SelectionChanged"/>
+
+
+
+
+        <TextBlock  Text="Routetables in Virtual Hubs"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="10,635,0,0"/>
+
+        <ListBox    Name="RouteTablesInVirtualHubsBox"
+                    SelectionMode="Single"
+                    ToolTip="Routetables in Virtual Hubs"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="200"
+                    Margin="20,660,0,0"/>
+
+        <TextBlock  Text="Spokes in Segmentation Domain"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="280,635,0,0"/>
+
+        <ListBox    Name="SpokesInDomainBox"
+                    ToolTip="Spokes in selected Segmentation Domain"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    Width="200"
+                    Height="200"
+                    Margin="340,660,0,0"/>
+
+        <TextBlock  Text="Segmentation Domains in Group"
+                    TextAlignment="Center"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    VerticalAlignment="Top"
+                    Width="300"
+                    Height="25"
+                    Margin="530,635,0,0"/>
+
+        <ListBox    Name="DomainsInGroupBox"
+                    ToolTip="Spoke in selected Segmentation Domain"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    Width="200"
+                    Height="200"
+                    Margin="580,660,0,0"/>
+
+        <TextBox    Name="ProgressBox"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    IsEnabled="True"
+                    Width="775"
+                    Height="200"
+                    Margin="800,660,0,0"/>
+
+
+    </Grid>
+
+
+
+</Window>

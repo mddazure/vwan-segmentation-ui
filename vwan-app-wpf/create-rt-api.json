@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "routes": [
+      {
+        "name": "route1",
+        "destinationType": "CIDR",
+        "destinations": [
+          "10.0.0.0/8",
+          "20.0.0.0/8",
+          "30.0.0.0/8"
+        ],
+        "nextHopType": "ResourceId",
+        "nextHop": "/subscriptions84334547-c401-4548-9cc8-5330a9882d2c/resourceGroups/vwan-microhack-hub-rg/providers/Microsoft.Network/azureFirewalls/AzureFirewall_microhack-we2-hub"
+      }
+    ],
+    "labels": [
+      "label1",
+      "label2"
+    ]
+  }
+}
